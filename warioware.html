@@ -128,12 +128,47 @@
 
     <h3>Playtesting your Game</h3>
 
+
+
     <h2 id="github-commiting-pushing">Committing and Pushing to GitHub</h2>
     <p>Remember when I said that you have to constantly <b>push</b> and <b>commit</b> your game every hour? But what does that mean? To <b>commit</b> means to save your work on your computer. To <b>push</b> means to actually bring those saved changes to GitHub. I know, it can sound confusing at first. Just remember there is just two buttons to click.</p>
     <p>First, you want to navigate to your GitHub Desktop. You will see that some changes have been made. These changes are the changes you made to your Godot files. Every time you made a change to the game, GitHub Desktop will point it out. Now go to the bottom and click <b>commit</b>. Remember this saves your changes. A summary may be required before hitting commit. In that case, just type what you did, like "Created a Menu Screen." </p>
     <img src="Screenshot 2026-05-16 at 6.24.18 PM.png">
     <p>Now hit <b>push origin</b> or <b>publish branch</b>. This will put those saved changes from your project onto GitHub. And you're all good!</p>
     <img src="Godot copy.png">
-    <p>Just remember to hit two buttons every hour you work on your project: <b>commit</b> and <b>push</b>. Try saying it 20 times fast.</p>
+    <p>Just remember to hit two buttons every hour you work on your project: <b>commit</b> and <b>push</b>. Try saying it 20 times fast!</p>
+
+
+
+    <h2>Creating the Level Scene</h2>
+    <p>In the Level Scene, it will be the screen displayed between each minigame level. It will display what level you are on. The Screen will display:</p>
+    <ul><li>5 Pieces of Garlic representing the player's lives</li> <li>the Level Number</li> <li>and a Timer</li></ul>
+    <img src="">
+    
+    <h3>Creating a New Scene</h3>
+    <p>Click the + next to the Title scene to create a new scene. Name it "level_scene."</p>
+    <img src="level1.png">
+    <p>Click "2D Scene." Double click it and add in a "TextureRect" node and change the texture in the right side of the screen to the desired background. For me, I am going to keep it the same image.</p>
+    <img src="level2.png">
+    <p>Resize the image to be the size of the screen. In order words, match it up to the blue lines again.</p>
+
+    <h3>Adding in the Garlic/Lives</h3>
+    <p>In this game, the pieces of garlic will represent the lives of the player. Think of Minecraft and how the hearts in the game represented a player's health. The onions are similar to that concept.</p>
+    <p>We want the onions to be displayed in a horizontal alignment. So, double click the 2D Scene node and search for a new node called "HBoxContainer."</p>
+    <img src="Screenshot 2026-05-16 at 6.55.31 PM.png">
+    <p>Double click the HBoxContainer and search for a TextureRect node. This TextureRect will hold the pictures of each onion/life. Rename the node to "Garlic." Rename the HBoxContainer to "GarlicContainer" to make it easier to navigate.</p>
+    <img src="Screenshot 2026-05-16 at 6.56.00 PM.png">
+    <p>Now press <b>control + d</b> to make 4 more pieces of garlic in the GarlicContainer. In total there should be 5. Can't see them? Try dragging out the length of the container. Rename each piece of garlic to "Garlic#" where # is the number of garlic it is. For example, the second garlic is "Garlic2"</p>
+    <img src="Screenshot 2026-05-16 at 6.56.06 PM.png">
+    <p>Drag and move the GarlicContainer to where you want it to be on the screen. For me, I am going to keep it near the top-center.</p>
+    <img src="Screenshot 2026-05-16 at 6.56.57 PM 2.png">
+    <p>Change the texture for each piece of garlic to be a picture of garlic. If you don't want it to be garlic, that's okay. You can change it to a picture of a heart or anything else you would prefer. You change the picture by clicking the node and changing their texture on the right side of the screen.</p>
+    <img src="">
+    <p>Now we have 5 pieces of garlic. Yum!</p>
+
+    <h3>Adding in the Level Count & Timer</h3>
+    <p>For the game, we need a piece of text saying what level number the player is on. We also need another piece of text stating how much time they have left.</p>
+    <p>Double click the 2D Scene and add in two "RichTextLabel" nodes. Name one "Level" and the other "Timer."</p>
+    <img src="Screenshot 2026-05-16 at 6.56.57 PM.png">
 </body>
 </html>
