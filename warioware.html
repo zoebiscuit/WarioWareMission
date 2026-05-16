@@ -9,10 +9,14 @@
             width: 600px;
             height: auto;
         }
+
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif
+        }
     </style>
 </head>
 <body>
-    <h1>How to Make your First Wario Ware Game</h1>
+    <h1>How to Make Your First Wario Ware Game</h1>
     <p>Have you ever played Wario Ware or any other really cool videogame? Have you ever thought of making your own version of the game? This tutorial will cover the basics of everything you need to know for making your first WarioWare videogame! </p>
     <p>If you already are familiar with Godot, feel free to jump through the tutorial. Have any questions while going through the tutorial? Feel free to dm us through slack at <b>@nonchalant ava (draws also)</b> and/or <b>@SuperCoolCodingGirl2014</b></p>
     <p>Now lets get started, shall we? C:</p>
@@ -34,7 +38,6 @@
     </ul>
     <p>If the links above cannot be accessed or don't fit your operating system, navigate to https://godotengine.org/ and click "Download Latest"</p>
     <img src="Screenshot 2026-05-16 at 1.34.13 PM.png">
-
     <p>Click the blue button in the middle of the screen that reads "Godot Engine". Open the download and open the application. When you open Godot, it should look like this:</p>
     <img src="godot-interface.webp">
 
@@ -50,43 +53,87 @@
     <img src="Screenshot 2026-05-16 at 1.46.07 PM.png">
     <p>Once you create your account or enter into your existing one, click the plus sign on the top right and click "New repository" to create a new repository.</p>
     <img src="Github1.png">
-    <p>Name it whatever you like. For me, I am going to name it "WarioWareGame." Make sure to make the repo is public so the reviewers can see your work. Finish creating the repo by clicking "create repository"</p>
+    <p>Name it whatever you like. For me, I am going to name it "WarioWareGame." Make sure to make the repo public so the reviewers can see your work. Finish creating the repo by clicking "create repository"</p>
     <img src="Github2.png">
-
     <p>Now we have to get our repository on our own computer! The fun part! Not really.</p>
 
 
 
     <h2>Downloading GitHub Desktop</h2>
     <p>We need to download GitHub Desktop so we can actively save our work from our own computer. Go <a href="https://desktop.github.com/download/">here</a> or to https://desktop.github.com/download/</p>
-
     <p>Click the download button that fits for your operating system.</p>
     <img src="Screenshot 2026-05-16 at 2.47.22 PM.png">
-
     <p>As you work on this project, you will want to make hourly commits and pushes as you work so your work is constantly saving to your repo. So, keep this application open. What do I mean by <b>commiting</b> and <b>pushing</b>? I will explain that in <a href=warioware.html#github-commiting-pushing>this section.</a> C:</p>
 
 
 
     <h2>Putting the GitHub project into our Local Repository</h2>
-    <p>P.S. If you need help navigating through this part or get stuck, shoot us a dm through Slack <b>@SuperCoolCodingGirl2014</b> or in the <b>#stardance</b> channel! <3 </p>
-
+    <p>P.S. If at any time you need help navigating through this part or get stuck, shoot us a dm through Slack <b>@SuperCoolCodingGirl2014</b> or in the <b>#stardance</b> channel! <3 </p>
     <p>Now lets get started with clicking the "Set up in Desktop" button in the "Quick Setup" section in GitHub. This will prompt us to get the repository locally on our device. This will allow us to share our files onto GitHub.</p>
     <img src="Github3.png">
     <p>Now you don't want to touch anything. Click "clone"</p>
     <img src="Github4.png">
-
     <p>If you get taken to the GitHub Desktop, that is exactly where we want to be.</p>
     <p>You will now want to click the "show in Finder" button or "show in FileManager" button. This will show you where your repository is. Keep track of this location. If you are on macOS, you can click <b>option + command + c</b> at the same time to copy the file address. If on Windows, you can <b>hold shift and right click the file to then select "Copy as path."</b> All these options save the file address, so we can later paste it into Godot.</p>
     <img src="Github5.png">
-
     <p> Now navigate to Godot and create your first project! (YAY) Type your game's name into "Project Name:" and paste the address we had before into the project's path. You can paste by clicking <b>control + v</b> on Windows, or <b>command + v</b> on macOS. Then click "create".</p>
-    <img src="Screenshot 2026-05-16 at 2.31.44 PM.png">
-        
+    <img src="Screenshot 2026-05-16 at 2.31.44 PM.png">   
     <p>Now we can roll into the real fun stuff!</p>
 
 
 
-    <h2>Working on the Title Screen</h2>
-</body>
+    <h2>Creating the Start Menu</h2>
 
+    <h3>What is a Start Menu?</h3>
+    <p>A start menu is pretty much the place where the player will go to once they open the game. It will consist of a:</p>
+    <ul> <li>Title</li> <li>Start Game Button</li> <li>Settings</li> <li>and a Quit button</li></ul>
+    <img src="Screenshot 2026-05-16 at 4.29.03 PM.png">
+
+    <h3>Creating the Title</h3>
+    <p>Create a new "2D Scene." Name that new node "TitleScreen" so we can easily navigate through our nodes. What are <b>nodes</b>? Nodes are the building blocks of Godot when you build the game.</p>
+    <img src="Github6.png">
+    <p>Click the + button near the top left corner of the screen. We want to add a new node that will act as the background image of our game. Search up "TextureRect" in the search when you click the "+". Name it "Background"</p>
+    <p>No we want to change the texture of the TextureRect to the image we want the background to be. Click the "Background" node and go to the right of the screen. Click the file button next to "Texture." Upload any image you want.</p>
+    <img src="Github7.png">
+    <p> To fit the image to the screen size, drag the image to the edge of the blue lines. The blue lines represent the size of the game screen.</p>
+    <img src="Github(1).png">
+    <p>Now we want to display the title for our game. Create a new node by double clicking the "TitleScreen" node and searching for the "RichTextLabel." Name it "Title." Drag the node on the background to position it where you want it on the screen. For me, I'm putting it in the almost top-center. Click the node, and on the right side of the screen, click the text box to type in the game's name.</p>
+    <img src="Godot.png">
+    <p>Scroll down to the "Control" section and click "Theme Overrides" and then "Font Sizes." Check off "Normal" and change it to 108px. Can't see your text box? Try dragging out the textbox to change its size. Move the textbox to where you want it to be. </p>
+    <p>Now click "Constants" and click "Outline Size." Change it to 40. This adds a nice black outline to our text.</p>
+    <img src="Screenshot 2026-05-16 at 5.22.59 PM.png">
+    <p>Notice how the text seems cut off on the left? To fix that, go to "Layout" under "Control" and turn off "Clip Content." Now it should look like this: </p>
+    <img src="Screenshot 2026-05-16 at 5.25.45 PM.png">
+
+    <h3>Creating a Button</h3>
+    <p>Now we have to add our "Start Game," "Settings," and "Quit" buttons.</p>
+    <p>Right click on the open space under the "Title" node. Search for "Button" and name it "Start." Click that node and go to the textbox on the right of the screen. Change what it says on the button to "Start Game." Drag the button to the desired size and move it to under the title, as shown below:</p>
+    <img src="Screenshot 2026-05-16 at 5.29.39 PM.png">
+    <p>Now we want to change the font size. Go to "Control" on the right then to "Theme Overrides" and then to "Font Sizes." Change the font size to 26px. Go to "Constants" and change the outline size to 14. </p>
+    <img src="Screenshot 2026-05-16 at 5.47.31 PM.png">
+    <p>Now we need to vertically align our three buttons. Double click the "TitleScreen" node and search for "VBoxContainer." This container will help us align our buttons neatly in a vertical alignment. Drag the "Start" button into the container. It should look like this:</p>
+    <img src="Screenshot 2026-05-16 at 5.50.31 PM.png">
+    <p>Move the VBoxContainer to the middle. Drag out its height so more buttons can fit in the container. </p>
+    <img src="Screenshot 2026-05-16 at 5.52.19 PM.png">
+    <p>Click on the button node and click <b>control + d</b> to duplicate the buttons. Do this two times to have three buttons. Name the nodes "Start", "Settings", and "Quit." Go to each node's text box and change what they say to also either "Start", "Settings", and "Quit". Should look like this:</p>
+    <img src="Screenshot 2026-05-16 at 6.00.41 PM.png">
+    <h3>Saving the Project</h3>
+    <p>There will be times where Godot crashes and all the progress for your project will be unsaved. Don't panic! I gotchu. To save a project, press <b>"control + s."</b> A window will pop up asking you what to save the scene as. Create a new folder to save the scene in. Name the folder "Scenes." Save the scene in that folder and then click "Save."</p>
+    <img src="Screenshot 2026-05-16 at 6.09.31 PM.png">
+    <p>Make sure to do this often as you make your game. I don't want to see you crying over your game.</p>
+
+    <h3>Programming the Buttons</h3>
+    <p>Now lets put some code into these buttons! The programming language that Godot uses is <b>GDScript</b>. It is specific towards Godot, but is relatively simple to learn. In my opinion, it is similar to Python.</p>
+    <p></p>
+
+    <h3>Playtesting your Game</h3>
+
+    <h2 id="github-commiting-pushing">Committing and Pushing to GitHub</h2>
+    <p>Remember when I said that you have to constantly <b>push</b> and <b>commit</b> your game every hour? But what does that mean? To <b>commit</b> means to save your work on your computer. To <b>push</b> means to actually bring those saved changes to GitHub. I know, it can sound confusing at first. Just remember there is just two buttons to click.</p>
+    <p>First, you want to navigate to your GitHub Desktop. You will see that some changes have been made. These changes are the changes you made to your Godot files. Every time you made a change to the game, GitHub Desktop will point it out. Now go to the bottom and click <b>commit</b>. Remember this saves your changes. A summary may be required before hitting commit. In that case, just type what you did, like "Created a Menu Screen." </p>
+    <img src="Screenshot 2026-05-16 at 6.24.18 PM.png">
+    <p>Now hit <b>push</b> or <b>publish branch</b>. This will put those saved changes from your project onto GitHub. And you're all good!</p>
+    <img src="Godot copy.png">
+    <p>Just remember to hit two buttons every hour you work on your project: <b>commit</b> and <b>push</b>. Try saying it 20 times fast.</p>
+</body>
 </html>
