@@ -18,7 +18,7 @@
 <body>
     <h1>How to Make Your First Wario Ware Game</h1>
     <p>Have you ever played Wario Ware or any other really cool videogame? Have you ever thought of making your own version of the game? This tutorial will cover the basics of everything you need to know for making your first WarioWare videogame! </p>
-    <p>If you already are familiar with Godot, feel free to jump through the tutorial. Have any questions while going through the tutorial? Feel free to dm us through slack at <b>@nonchalant ava (draws also)</b> and/or <b>@SuperCoolCodingGirl2014</b></p>
+    <p>If you already are familiar with Godot, feel free to jump through the tutorial. Have any questions while going through the tutorial? Feel free to dm us through slack at <b>@nonchalant ava (draws also)</b> and/or <b>@SuperCoolCodingGirlFNAF2014</b></p>
     <p>Now lets get started, shall we? C:</p>
 
 
@@ -68,7 +68,7 @@
 
 
     <h2>Putting the GitHub project into our Local Repository</h2>
-    <p>P.S. If at any time you need help navigating through this part or get stuck, shoot us a dm through Slack <b>@SuperCoolCodingGirl2014</b> or in the <b>#stardance</b> channel! <3 </p>
+    <p>P.S. If at any time you need help navigating through this part or get stuck, shoot us a dm through Slack <b>@SuperCoolCodingFNAF2014</b> or in the <b>#stardance</b> channel! <3 </p>
     <p>Now lets get started with clicking the "Set up in Desktop" button in the "Quick Setup" section in GitHub. This will prompt us to get the repository locally on our device. This will allow us to share our files onto GitHub.</p>
     <img src="Github3.png">
     <p>Now you don't want to touch anything. Click "clone"</p>
@@ -97,7 +97,7 @@
     <img src="Github7.png">
     <p> To fit the image to the screen size, drag the image to the edge of the blue lines. The blue lines represent the size of the game screen.</p>
     <img src="Github(1).png">
-    <p>Now we want to display the title for our game. Create a new node by double clicking the "TitleScreen" node and searching for the "RichTextLabel." Name it "Title." Drag the node on the background to position it where you want it on the screen. For me, I'm putting it in the almost top-center. Click the node, and on the right side of the screen, click the text box to type in the game's name.</p>
+    <p>Now we want to display the title for our game. Create a new node by clicking the + again to make a new node and searching for the "RichTextLabel." Name it "Title." Drag the node on the background to position it where you want it on the screen. For me, I'm putting it in the almost top-center. Click the node, and on the right side of the screen, click the text box to type in the game's name.</p>
     <img src="Godot.png">
     <p>Scroll down to the "Control" section and click "Theme Overrides" and then "Font Sizes." Check off "Normal" and change it to 108px. Can't see your text box? Try dragging out the textbox to change its size. Move the textbox to where you want it to be. </p>
     <p>Now click "Constants" and click "Outline Size." Change it to 40. This adds a nice black outline to our text.</p>
@@ -111,7 +111,7 @@
     <img src="Screenshot 2026-05-16 at 5.29.39 PM.png">
     <p>Now we want to change the font size. Go to "Control" on the right then to "Theme Overrides" and then to "Font Sizes." Change the font size to 26px. Go to "Constants" and change the outline size to 14. </p>
     <img src="Screenshot 2026-05-16 at 5.47.31 PM.png">
-    <p>Now we need to vertically align our three buttons. Double click the "TitleScreen" node and search for "VBoxContainer." This container will help us align our buttons neatly in a vertical alignment. Drag the "Start" button into the container. It should look like this:</p>
+    <p>Now we need to vertically align our three buttons. Click the + button on the top left to add a new node and search for "VBoxContainer." This container will help us align our buttons neatly in a vertical alignment. Drag the "Start" button into the container. It should look like this:</p>
     <img src="Screenshot 2026-05-16 at 5.50.31 PM.png">
     <p>Move the VBoxContainer to the middle. Drag out its height so more buttons can fit in the container. </p>
     <img src="Screenshot 2026-05-16 at 5.52.19 PM.png">
@@ -124,7 +124,7 @@
 
     <h3>Programming the Buttons</h3>
     <p>Now lets put some code into these buttons! The programming language that Godot uses is <b>GDScript</b>. It is specific towards Godot, but is relatively simple to learn. In my opinion, it is similar to Python.</p>
-    <p></p>
+    <p>We need to create a <b>script</b> for each node we want to add code to. A <b>script</b> is a set of written instructions for our nodes written in a programming language, specifically GDScript. </p>
 
     <h3>Playtesting your Game</h3>
 
@@ -143,32 +143,56 @@
     <h2>Creating the Level Scene</h2>
     <p>In the Level Scene, it will be the screen displayed between each minigame level. It will display what level you are on. The Screen will display:</p>
     <ul><li>5 Pieces of Garlic representing the player's lives</li> <li>the Level Number</li> <li>and a Timer</li></ul>
-    <img src="">
+    <img src="Screenshot 2026-05-18 at 12.22.00 PM.png">
     
     <h3>Creating a New Scene</h3>
     <p>Click the + next to the Title scene to create a new scene. Name it "level_scene."</p>
     <img src="level1.png">
-    <p>Click "2D Scene." Double click it and add in a "TextureRect" node and change the texture in the right side of the screen to the desired background. For me, I am going to keep it the same image.</p>
+    <p>Click "2D Scene." Click the + and add in a "TextureRect" node and change the texture in the right side of the screen to the desired background. For me, I am going to keep it the same image.</p>
     <img src="level2.png">
     <p>Resize the image to be the size of the screen. In order words, match it up to the blue lines again.</p>
 
     <h3>Adding in the Garlic/Lives</h3>
     <p>In this game, the pieces of garlic will represent the lives of the player. Think of Minecraft and how the hearts in the game represented a player's health. The onions are similar to that concept.</p>
-    <p>We want the onions to be displayed in a horizontal alignment. So, double click the 2D Scene node and search for a new node called "HBoxContainer."</p>
+    <p>We want the onions to be displayed in a horizontal alignment. So, click the 2D Scene node and click the + to search for a new node called "HBoxContainer."</p>
     <img src="Screenshot 2026-05-16 at 6.55.31 PM.png">
-    <p>Double click the HBoxContainer and search for a TextureRect node. This TextureRect will hold the pictures of each onion/life. Rename the node to "Garlic." Rename the HBoxContainer to "GarlicContainer" to make it easier to navigate.</p>
+    <p>Click the HBoxContainer and the + button and search for a TextureRect node. This TextureRect will hold a picture of each onion/life. Rename the node to "Garlic." Rename the HBoxContainer to "GarlicContainer" to make it easier to navigate.</p>
     <img src="Screenshot 2026-05-16 at 6.56.00 PM.png">
-    <p>Now press <b>control + d</b> to make 4 more pieces of garlic in the GarlicContainer. In total there should be 5. Can't see them? Try dragging out the length of the container. Rename each piece of garlic to "Garlic#" where # is the number of garlic it is. For example, the second garlic is "Garlic2"</p>
+    <p>Now click "Garlic" and press <b>control + d</b> to make 4 more pieces of garlic in the GarlicContainer. In total there should be 5. Can't see them? Try dragging out the length of the container. Rename each piece of garlic to "Garlic#" where # is the number of garlic it is. For example, the second garlic is "Garlic2"</p>
     <img src="Screenshot 2026-05-16 at 6.56.06 PM.png">
     <p>Drag and move the GarlicContainer to where you want it to be on the screen. For me, I am going to keep it near the top-center.</p>
     <img src="Screenshot 2026-05-16 at 6.56.57 PM 2.png">
-    <p>Change the texture for each piece of garlic to be a picture of garlic. If you don't want it to be garlic, that's okay. You can change it to a picture of a heart or anything else you would prefer. You change the picture by clicking the node and changing their texture on the right side of the screen.</p>
-    <img src="">
-    <p>Now we have 5 pieces of garlic. Yum!</p>
 
     <h3>Adding in the Level Count & Timer</h3>
     <p>For the game, we need a piece of text saying what level number the player is on. We also need another piece of text stating how much time they have left.</p>
-    <p>Double click the 2D Scene and add in two "RichTextLabel" nodes. Name one "Level" and the other "Timer."</p>
+    <p>Click the + button and add in two "RichTextLabel" nodes. Name one "Level" and the other "Timer."</p>
     <img src="Screenshot 2026-05-16 at 6.56.57 PM.png">
+    <p>Click the "Level" node and go to the right of the screen. Change its text to "Level #" Do the same to the "Timer" node and change it to "0.0". You can move these nodes to wherever you want them on the screen. Also, go to Theme Overrides and then Colors to change the default color to black. </p>
+    <img src="Screenshot 2026-05-16 at 6.58.58 PM.png">
+    <p>Now lets change the font size. Click "Timer" and go to Control then to Theme Overrides and then to Font Sizes. Change the normal font size to 42px. Do the same to "Level." </p>
+    <img src="Screenshot 2026-05-16 at 6.59.11 PM.png">
+    <p>Drag out the size of the nodes' boxes on the screen to make sure the whole text is showing. Move them to where you seem fit.</p>
+    <img src="Screenshot 2026-05-16 at 6.59.58 PM.png">
+
+    <h3>Adding in the Garlic images</h3>
+    <p>Change the texture for each piece of garlic to be a picture of garlic. If you don't want it to be garlic, that's okay. You can change it to a picture of a heart or anything else you would prefer. You change the picture by clicking each node and changing their texture on the right side of the screen.</p>
+    <img src="Screenshot 2026-05-18 at 11.54.28 AM.png">
+    <p>After adding the new textures, you might have to rescale the nodes by dragging the corner of the box. You might have to also reposition the pieces of garlic.</p>
+    <img src="Screenshot 2026-05-18 at 11.54.33 AM.png">
+    <p>Now we have 5 pieces of garlic. Yum!</p>
+    <img src="Screenshot 2026-05-18 at 11.54.55 AM.png">
+
+
+
+    <h2>Programming the Level Scene</h2>
+    <p>Now lets get started on the nerdy stuff. The timer, level count, and lives are not functional yet because they need code. So, lets get started on that.</p>
+
+    <h3>Programming the Timer</h3>
+    <p>We need to create a <b>script</b> for each node we want to add code to. Remember, a <b>script</b> is a set of written instructions written in GDScript.</p>
+    <p>To add a script, click the 2D Scene and the paper scroll button above all your nodes. This adds a script attached to that 2D Scene. </p>
+    <img src="Screenshot 2026-05-18 at 11.55.13 AM.png">
+    <p>Name it "timer_screen". </p>
+    <img src="Screenshot 2026-05-18 at 11.55.11 AM.png">
+
 </body>
 </html>
