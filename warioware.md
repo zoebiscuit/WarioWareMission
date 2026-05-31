@@ -161,12 +161,69 @@ There will be times where Godot crashes and all the progress for your project wi
 
 Make sure to do this often as you make your game. I don't want to see you crying over your game.
 
+
 ### Programming the Buttons
 Now lets put some code into these buttons! The programming language that Godot uses is **GDScript**. It is specific towards Godot, but is relatively simple to learn. In my opinion, it is similar to Python.
 
-We need to create a **script** for each node we want to add code to. A **script** is a set of written instructions for our nodes written in a programming language, specifically GDScript.
+> We need to create a **script** for each node we want to add code to. A **script** is a set of written instructions for our nodes written in a programming language, specifically GDScript.
 
-### Playtesting your Game
+Go to the "TitleScreen" node and add a script by clicking the paper scroll button. Save that new script.
+
+![](https://cdn.hackclub.com/019e757e-ecdd-7e42-8cb9-15fb10b1f097/14.png)
+
+Click the "Start" button node on the left. Go to the right of the screen and click "Signals" and double click "pressed()" 
+
+![](https://cdn.hackclub.com/019e757e-efdb-7c41-8eeb-371322c56d5e/15.png)
+![](https://cdn.hackclub.com/019e757e-f285-7e07-92eb-402157953806/16.png)
+
+> What are **signals**? Signals track when changes are created so we can create code to make our game respond to it. In this case, we're making the game react to the player pressing the button.
+
+Connect the Script to the "TitleScreen" node, not the button. To make sure its connected, make sure TitleScreen is highlighted.
+
+![](https://cdn.hackclub.com/019e757e-f54f-7d2f-96bf-aa9a3a34adc6/17.png)
+
+It should have navigated you to the "TitleScreen" node's script. 
+
+![](https://cdn.hackclub.com/019e757d-1669-71ef-805c-9dda5018136c/screenshot_2026-05-29_at_4.46.03___pm.png)
+
+Under the "func _on_button_pressed() -> void:" we want to add "get_tree().change_scene_to_file("???")" where ??? is the location of the scene in your local computer. The specific location might be different for other people. It should look like this:
+
+	func _on_button_pressed() -> void:
+		get_tree().change_scene_to_file("res://node_2d.tscn")
+
+# Creating a Platformer Minigame
+
+> You are going to be making a minigame where you will have to collect a total of 3 garlics around a map on a platformer. We will need:
+> - A Moving Player
+> - A Platform
+> - Garlic Object(s)
+> - and barriers
+>
+> So, lets get right on it!
+
+## Creating the Player
+
+Make a new scene called "Player." Change its type to "CharacterBody2D" by right clicking the "Player" node.
+
+![](/Screenshot%202026-05-29%20at%207.38.29 PM.png)
+
+Add a node called "Sprite2D" and another called "CollisionShape2D"
+
+![](/Screenshot%202026-05-29%20at%207.44.23 PM.png)
+
+Change the CollisionShape2D's shape to CircleShape.
+
+![](/Screenshot%202026-05-29%20at%207.45.37 PM.png)
+
+Change Sprite2D's texture to the image of the character you want. For me, I am doing a pixelated version of Wario I got from online.
+
+Resize the CollisionShape2D to cover the whole player by dragging the red dot on the circle with your mouse.
+
+![](/Screenshot%202026-05-29%20at%208.00.33 PM.png)
+
+> ### Playtesting your Game
+> While you make your game, you want to test your game throughout. We do this to catch any errors. How do you do that? Simple. Click the play button on the top of the screen.
+> ![](https://cdn.hackclub.com/019e7588-42ed-7d4a-b39d-e57c23397c83/godot.png)
 
 
 
@@ -332,3 +389,42 @@ The resulting code should be exactly this for the "timer_screen" script:
 
     func wait(seconds: float) -> void: # write this simple function out for wait!
         await get_tree().create_timer(seconds).timeout # makes u wait
+
+# Submitting Game
+
+> You're finally done with your project! Now, how do we get this project to be accessible online so you can share it to all your friends, family, or to other hackers? I gotchu.
+
+First things first, go to the top of the screen and click "Project" and then "Export.."
+
+![](https://cdn.hackclub.com/019e75d8-d9b6-7c0e-a324-532f45395f4d/19.png)
+
+Add a preset called "Web." You may have to download it. After it's done, click "Export Project.." 
+
+![](https://cdn.hackclub.com/019e75d4-4659-7333-9afd-11ba07969fd6/screenshot_2026-05-29_at_6.21.37___pm.png)
+
+Create a folder called "exports" so we can keep track of all these files in one place. Name the file "index.html"
+
+![](https://cdn.hackclub.com/019e75d8-dbf3-7100-90cc-1f61ac6922cd/20.png)
+
+Click Save. Then find the exports folder in your file manager. 
+
+![](https://cdn.hackclub.com/019e75d8-dde4-74a9-b819-40193ba7adeb/21.png)
+
+Go inside and zip/compress all the files together. You can do this by holding shift and selecting all the files, and then right clicking to find a "zip" or "compress" option. 
+
+![](https://cdn.hackclub.com/019e75d8-e011-7434-97e9-c327cfdbc2b7/22.png)
+
+## Putting the Game onto Itch.io
+
+Go to [itch.io](itch.io). Make an account. Go to the arrow on the left and click "Upload new project."
+
+![](https://cdn.hackclub.com/019e75d8-e23a-7100-86b3-b3bee97757c3/23.png)
+
+
+Make sure to:
+1. Give the game a creative title
+2. Make sure the Kind of Project is **HTML**
+3. Upload the Archive.zip or the compressed file.
+4. Make the game a Draft, and then make the game public after saving.
+
+> Test your game on itch.io. Does it work? If something appears broken, go back through this section and see if you missed something.
